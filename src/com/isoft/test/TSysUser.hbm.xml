@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-4-16 10:51:23 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.isoft.test.TSysUser" table="t_sys_user">
+        <id name="TUserId" type="string">
+            <column name="t_user_id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="TUserName" type="string">
+            <column name="t_user_name" length="50" />
+        </property>
+        <property name="TUserPwd" type="string">
+            <column name="t_user_pwd" length="50" />
+        </property>
+        <property name="TGender" type="string">
+            <column name="t_gender" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

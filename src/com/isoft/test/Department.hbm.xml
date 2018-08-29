@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.isoft.test.Department"  table="t_department">
+<id name="deptid" type="java.lang.String">
+   <column name="t_dept_id"></column>
+   <generator class="assigned"></generator>
+</id>
+<property name="dname" type="java.lang.String">
+<column name="t_dname"></column>
+</property>
+
+<!-- <set name="employees">
+<key column="t_deptid"></key>
+<one-to-many class="com.isoft.model.Employee"/>
+</set> -->
+</class>
+</hibernate-mapping>

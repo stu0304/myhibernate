@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.isoft.test.Project" table="t_project" >
+        <id name="projectId" column="t_project_id">
+            <generator class="assigned" />
+        </id>
+        <property name="projectName" type="java.lang.String">
+            <column name="t_project_name" length="40" />
+        </property>
+        <property name="projectDesc" type="java.lang.String">
+            <column name="t_project_desc" length="50" />
+        </property>
+        <set name="personSet"  table="r_project_person"  inverse="true">
+            <key>
+                <column name="r_project_id" />
+            </key>
+            <many-to-many class="com.isoft.test.Person" column="r_person_id"/>
+        </set>
+    </class>
+</hibernate-mapping>

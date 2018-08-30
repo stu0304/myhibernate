@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.isoft.test.Street" table="t_street" lazy="true">
+        <id name="streetId" type="java.lang.Integer">
+            <column name="t_street_id"/>
+            <generator class="assigned" />
+        </id>
+        
+        <many-to-one name="district" class="com.isoft.test.District">
+            <column name="t_district_id" />
+        </many-to-one>
+        <property name="streetName" type="java.lang.String">
+            <column name="t_street_name" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

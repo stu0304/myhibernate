@@ -17,8 +17,8 @@
 		com.mysql.jdbc.Driver
 		</property>                                   
 		<property name="hbm2ddl.auto">update</property>
-		<mapping resource="com/isoft/test/TSysUser.hbm.xml"/>
-		<mapping resource="com/isoft/test/Department.hbm.xml"/>
+		<mapping resource="com/isoft/test/Street.hbm.xml"/>
+		<mapping resource="com/isoft/test/District.hbm.xml"/>
 
 		
 	
